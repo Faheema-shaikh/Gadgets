@@ -13,7 +13,7 @@ class BodyUp extends StatelessWidget {
         const SizedBox(height: 20),
         ProfileMenu(
           icon: "assets/icons/User Icon.svg",
-          text: "My Account",
+          text: "My new Account",
           press: () {},
         ),
         ProfileMenu(
