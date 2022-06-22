@@ -20,7 +20,7 @@ class TopRounded extends StatelessWidget {
       // height: 300,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(40),
           topRight: Radius.circular(40),
         ),

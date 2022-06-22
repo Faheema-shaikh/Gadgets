@@ -9,12 +9,12 @@ class LoginSuccess extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Login Success",
           style: TextStyle(color: Colors.grey),
         ),
       ),
-      body: BodyLs(),
+      body: const BodyLs(),
     );
   }
 }

@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(context),
       body: BodyCS(),
-      bottomNavigationBar: CheckOutCart(),
+      bottomNavigationBar: const CheckOutCart(),
     );
   }
 
@@ -21,7 +21,7 @@ class CartScreen extends StatelessWidget {
     return AppBar(
       title: Column(
         children: [
-          Text(
+          const Text(
             "Your Cart",
             style: TextStyle(
               fontSize: 22,
@@ -50,19 +50,19 @@ class CheckOutCart extends StatelessWidget {
       height: 174,
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30), topRight: Radius.circular(30)),
           boxShadow: [
             BoxShadow(
-              offset: Offset(0, -15),
+              offset: const Offset(0, -15),
               blurRadius: 20,
-              color: Color(0xFFDADADA).withOpacity(0.15),
+              color: const Color(0xFFDADADA).withOpacity(0.15),
             ),
           ]),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text.rich(
+          const Text.rich(
             TextSpan(
               text: "Total:\n",
               children: [

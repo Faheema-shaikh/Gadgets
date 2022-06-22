@@ -28,7 +28,7 @@ class BodyLs extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(
@@ -36,7 +36,7 @@ class BodyLs extends StatelessWidget {
             press: () => Navigator.pushNamed(context, HomeScreen.routeName),
           ),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

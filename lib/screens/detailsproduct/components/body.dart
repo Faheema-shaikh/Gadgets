@@ -26,7 +26,7 @@ class BodyDP extends StatelessWidget {
                 pressOnSeeMore: () {},
               ),
               TopRounded(
-                color: Color(0xFFF6F7F9),
+                color: const Color(0xFFF6F7F9),
                 child: Column(
                   children: [
                     ColorDots(product: product),

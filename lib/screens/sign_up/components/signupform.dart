@@ -16,7 +16,7 @@ class SignUpForm extends StatefulWidget {
 class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String? email;
-  String? Password;
+  String? password;
   String? confm_password;
   bool remember = false;
   final List<String> errors = [];
@@ -68,20 +68,20 @@ class _SignUpFormState extends State<SignUpForm> {
       obscureText: true,
       onSaved: (newValue) => confm_password = newValue!,
       onChanged: (value) {
-        if (Password == confm_password) {
+        if (password == confm_password) {
           removeError(error: kMatchPassError);
         }
       },
       validator: (value) {
         if (value!.isEmpty) {
           return "";
-        } else if (Password != value) {
+        } else if (password != value) {
           addError(error: kMatchPassError);
           return "";
         }
         return null;
       },
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         hintText: "Re-Enter the Password",
         label: Text("Conform Password"),
       ),
@@ -91,15 +91,14 @@ class _SignUpFormState extends State<SignUpForm> {
   TextFormField buildPassFormtext() {
     return TextFormField(
       obscureText: true,
-      onSaved: (newValue) => Password = newValue!,
+      onSaved: (newValue) => password = newValue!,
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kPassNullError);
         } else if (value.length >= 8) {
           removeError(error: kShortPassError);
         }
-        Password = value;
-        return null;
+        password = value;
       },
       validator: (value) {
         if (value!.isEmpty) {
@@ -111,7 +110,7 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         hintText: "Enter the Password",
         label: Text("Password"),
       ),
@@ -128,7 +127,6 @@ class _SignUpFormState extends State<SignUpForm> {
         } else if (emailValidatorRegExp.hasMatch(value)) {
           removeError(error: kInvalidEmailError);
         }
-        return null;
       },
       validator: (value) {
         if (value!.isEmpty) {
@@ -140,7 +138,7 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         hintText: "Enter the Email",
         label: Text("Email"),
       ),

@@ -21,12 +21,12 @@ class Body extends StatelessWidget {
                   height: SizeConfig.screenHeight * 0.04,
                 ),
                 Text(
-                  "Welcome back",
+                  "Welcome",
                   style: TextStyle(
                       fontSize: getProportionateScreenWidth(28),
                       fontWeight: FontWeight.bold),
                 ),
-                Text(
+                const Text(
                   "Sigin in with your email and password",
                   //style: TextStyle(fontSize: getProportionateScreenWidth(28)),
                   textAlign: TextAlign.center,
